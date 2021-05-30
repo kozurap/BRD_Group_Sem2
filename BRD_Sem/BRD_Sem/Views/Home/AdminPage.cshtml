@@ -1,0 +1,73 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+}
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - BRD_Sem</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+        <img src="~/img/logo.png" class="d-inline-block align-top" alt="">
+        BRD Admin Panel
+    </a>
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <button type="button" class="btn btn-primary mt-1" data-toggle="modal" data-target="#createpost">
+                Create Post
+            </button>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Back to the site</a>
+        </li>
+    </ul>
+</nav>
+<body style="background-color:darkslategray">
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+<footer class="footer">
+    <div class="container">
+        <div class="text-center">
+            <span style="color:whitesmoke">Created By <a href="#">BRD</a>, 2021</span>
+        </div>
+    </div>
+</footer>
+<div class="modal fade" id="createpost" tabindex="-1" role="dialog" aria-labelledby="crPost" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title align-content-center" id="crPost">Create New Post</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <div class="signin mt-2">
+                    <form>
+                        <h5>Enter Post Name</h5>
+                        <input type="text" class="form-control mt-1" id="PostName">
+                        <h5>Insert Image</h5>
+                        <input type="file" accept="image/jpeg,image/png" class="form-control-filr mt-1" id="newAvatar">
+                        <h5>Enter Author Name</h5>
+                        <input type="text" class="form-control mt-1" id="AuthorName">
+                        <h5>Add A Description</h5>
+                        <input type="text" class="form-control mt-1" id="Description">
+                    </form>
+                    <div class="continue-button">
+                        <button type="button" class="btn btn-primary mt-2">
+                            Post dat sht!
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
