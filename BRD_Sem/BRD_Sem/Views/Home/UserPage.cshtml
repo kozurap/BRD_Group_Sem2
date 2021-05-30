@@ -1,0 +1,55 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="user-account row">
+    <div class="user-avatar">
+        <div>
+            <h3>This is You!</h3>
+        </div>
+        <div>
+            <img class="img-fluid" src="~/img/DefaultAvatar.jpg"/>
+        </div>
+    </div>
+    <div class="user-info">
+        <h4>Username</h4>
+        <p>sas</p>
+        <h4>E-mail</h4>
+        <p>a@mog.us</p>
+        <h4>Phone number</h4>
+        <p>88005553535</p>
+        <button type="button" class="btn btn-primary mt-2" data-toggle="modal" data-target="#profedit">Edit</button>
+    </div>
+    
+</div>
+<div class="modal fade" id="profedit" tabindex="-1" role="dialog" aria-labelledby="profEd" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title align-content-center" id="profEd">Edit Profile</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                
+                <div class="signin mt-2">
+                    <form>
+                        <h5>New Username</h5>
+                        <input type="text" class="form-control mt-1" id="newUsername">
+                        <h5>New Avatar</h5>
+                        <input type="file" accept="image/jpeg,image/png" class="form-control-filr mt-1" id="newAvatar">
+                        <h5>Confirm Your Password</h5>
+                        <input type="password" class="form-control mt-1" id="confirmPassword"/>
+                    </form>
+                    <div class="continue-button">
+                        <button type="button" class="btn btn-primary mt-1">
+                            Save Changes
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

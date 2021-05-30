@@ -1,8 +1,10 @@
 ﻿
-.modal-body {
+#signUpBody {
     display: flex;
 }
-
+#signInBody {
+    display: flex;
+}
 
 
 

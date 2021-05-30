@@ -33,7 +33,7 @@ namespace BRD_Sem.Controllers
             return View();
         }
 
-        public IActionResult HomePage()
+        public IActionResult UserPage()
         {
             return View();
         }
