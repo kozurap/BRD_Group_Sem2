@@ -1,71 +1,126 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
-
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+﻿
+.modal-body {
+    display: flex;
 }
 
-/* Provide sufficient contrast against white background */
-a {
-  color: #0366d6;
+
+
+.side-bottom-icons {
+    margin-bottom: 2em;
+    display: flex;
+    justify-content: space-evenly;
 }
 
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
+    .side-bottom-icons ul {
+        padding: 0;
+        margin: 0;
+    }
 
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
 html {
-  font-size: 14px;
-}
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
-}
-
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    margin-bottom: 4.5rem;
 }
+
+#navFix {
+    padding: 0em;
+}
+
+li#credits {
+    margin-top: 100%;
+}
+
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    background-color: rgb(59, 65, 66);
+}
+
+.nav-link:hover {
+    transition: all 0.4s;
+}
+
+.nav-link-collapse:after {
+    float: right;
+    content: '\f067';
+    font-family: 'FontAwesome';
+}
+
+.nav-link-show:after {
+    float: right;
+    content: '\f068';
+    font-family: 'FontAwesome';
+}
+
+.navbar-expand-lg .sidenav {
+    flex-direction: column;
+}
+
+ul#navAccordion {
+    flex-direction: column;
+}
+
+.nav-item ul.nav-second-level {
+    padding-left: 0;
+}
+
+    .nav-item ul.nav-second-level > .nav-item {
+        padding-left: 20px;
+    }
+
+.resent-grid {
+    padding-left: 0.1em;
+}
+
+.resent-grid-img {
+    position: relative;
+}
+
+    .resent-grid-img a {
+        display: block;
+    }
+
+.resent-grid a img {
+    width: 100%;
+}
+
+.recommended-info h3 {
+    font-size: 20px;
+    color: #181818;
+    margin: 0 0 1em 0;
+    font-weight: 600;
+}
+
+@media (max-width: 991px) {
+    .fixed-top {
+        position: initial;
+    }
+
+    li#credits {
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .sidenav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 230px;
+        height: calc(100vh - 3.5rem);
+        margin-top: 3.5rem;
+        background: #343a40;
+        box-sizing: border-box;
+        border-top: 1px solid rgba(0, 0, 0, 0.3);
+    }
+
+    #mainBody {
+        padding-top: 6%;
+    }
 }
