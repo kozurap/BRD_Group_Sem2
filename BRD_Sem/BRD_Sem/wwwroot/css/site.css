@@ -6,7 +6,19 @@
     display: flex;
 }
 
+.history-left {
+    width: 90px !important;
+    height: 90px;
+    background: #C5C5C5;
+}
 
+    .history-left p {
+        font-size: 17px;
+        color: #272C2E;
+        margin: 1.7em 0 0 0;
+        font-weight: 600;
+        text-align: center;
+    }
 
 .side-bottom-icons {
     margin-bottom: 2em;
@@ -78,7 +90,7 @@ ul#navAccordion {
     }
 
 .resent-grid {
-    padding-left: 0.1em;
+    padding-top:1em;
 }
 
 .resent-grid-img {
@@ -104,6 +116,7 @@ ul#navAccordion {
 .recommended {
     margin-top: 2em;
 }
+
 
 @media (max-width: 991px) {
     .fixed-top {

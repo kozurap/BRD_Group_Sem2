@@ -16,6 +16,9 @@
         <img src="~/img/logo.png" class="d-inline-block align-top" alt="">
         BRD Admin Panel
     </a>
+    <form style="width:65%">
+        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+    </form>
     <ul class="navbar-nav">
         <li class="nav-item">
             <button type="button" class="btn btn-primary mt-1" data-toggle="modal" data-target="#createpost">
@@ -28,6 +31,49 @@
     </ul>
 </nav>
 <body style="background-color:darkslategray">
+    <div class="filters">
+        <h2 style="color:white">Filter By</h2>
+        <form>
+            <button type="button" class="btn btn-light ml-3">
+                Post Name
+            </button>
+        </form>
+        <form>
+            <button type="button" class="btn btn-light ml-3">
+                Author Name
+            </button>
+        </form>
+    </div>
+    <div class="adminPosts">
+        <form>
+            <div class="col-md-4 resent-grid recommended-grid slider-top-grids mt-3">
+                <div class="resent-grid-img recommended-grid-img">
+                    <a href="#">
+                        <img class="img-fluid" src="/img/t1.jpg" />
+                    </a>
+                </div>
+                <div class="resent-grid-info recommended-grid-info">
+                    <h3>
+                        <a href="#" class="title title-info">Kal</a>
+                    </h3>
+                    <a href="#" class="author">Truhin</a>
+                </div>
+            </div>
+            <div class="col-md-4 resent-grid recommended-grid slider-top-grids mt-3">
+                <div class="resent-grid-img recommended-grid-img">
+                    <a href="#">
+                        <img class="img-fluid" src="/img/t1.jpg" />
+                    </a>
+                </div>
+                <div class="resent-grid-info recommended-grid-info">
+                    <h3>
+                        <a href="#" class="title title-info">Kal</a>
+                    </h3>
+                    <a href="#" class="author">Truhin</a>
+                </div>
+            </div>
+        </form>
+    </div>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

@@ -41,6 +41,14 @@ namespace BRD_Sem.Controllers
         {
             return View();
         }
+        public IActionResult TVShows()
+        {
+            return View();
+        }
+        public IActionResult History()
+        {
+            return View();
+        }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
