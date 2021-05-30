@@ -5,6 +5,7 @@
 
 
 
+
 .side-bottom-icons {
     margin-bottom: 2em;
     display: flex;
@@ -90,11 +91,16 @@ ul#navAccordion {
     width: 100%;
 }
 
+
 .recommended-info h3 {
     font-size: 20px;
     color: #181818;
     margin: 0 0 1em 0;
     font-weight: 600;
+}
+
+.recommended {
+    margin-top: 2em;
 }
 
 @media (max-width: 991px) {
@@ -122,5 +128,6 @@ ul#navAccordion {
 
     #mainBody {
         padding-top: 6%;
+        margin-left: 1em;
     }
 }
