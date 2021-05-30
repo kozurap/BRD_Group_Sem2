@@ -23,6 +23,11 @@ namespace BRD_Sem.Controllers
             return View();
         }
 
+        public IActionResult ContentPage()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
