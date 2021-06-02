@@ -148,7 +148,7 @@ namespace BRD_Sem.Controllers
         }
         
 
-        public string HashPassword(string password)
+        public static string HashPassword(string password)
         {
             var hashBuilder = new StringBuilder();
             using (var hash = SHA256.Create())
