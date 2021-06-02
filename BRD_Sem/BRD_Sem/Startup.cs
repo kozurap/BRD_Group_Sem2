@@ -30,7 +30,7 @@ namespace BRD_Sem
         {
             services.AddControllersWithViews();
             services.AddDbContext<ApplicationContext>(option =>
-                option.UseNpgsql(Configuration.GetConnectionString("connectionString"), b => b.MigrationsAssembly("BRD_Sem")));
+                option.UseNpgsql(Configuration.GetConnectionString("connectionString")));
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                 .AddCookie(options =>
                 {
@@ -48,6 +48,8 @@ namespace BRD_Sem
             services.AddSingleton(serviceProvider =>
                 new EmailConfirmationService(TimeSpan.FromMinutes(5), serviceProvider.GetService<CommandService>())
             );
+            services.AddControllersWithViews();
+            services.AddHttpContextAccessor();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

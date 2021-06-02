@@ -22,26 +22,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="189c02f8-adb1-44a2-b5fb-2b1126a9ced3" name="Default Changelist" comment="Вот короче на, это с авторизацией, берешь AccountController, И делаешь под него View">
-      <change afterPath="$PROJECT_DIR$/BRD_Sem/Models/Post.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BRD_Sem/Models/ViewModels/ProfileModels/UserViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BRD_Sem/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BRD_Sem/.idea/contentModel.xml" afterDir="false" />
+    <list default="true" id="189c02f8-adb1-44a2-b5fb-2b1126a9ced3" name="Default Changelist" comment="Профиль, Аккаунт, АдминПанель, Expired, Темплейт для остальных контроллеров, куча сервисов, туда сюда">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BRD_Sem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BRD_Sem/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BRD_Sem/BRD_Sem.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/BRD_Sem/BRD_Sem.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BRD_Sem/Controllers/AccountController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BRD_Sem/Controllers/AccountController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BRD_Sem/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BRD_Sem/Controllers/HomeController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BRD_Sem/Infrostructure/ClaimsPrincipalExtensions.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/BRD_Sem/Models/ApplicationContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BRD_Sem/Models/ApplicationContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BRD_Sem/Models/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BRD_Sem/Models/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BRD_Sem/Views/Home/AdminPage.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/BRD_Sem/Views/AdminPanel/AdminPage.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BRD_Sem/Views/Home/History.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/BRD_Sem/Views/History/History.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BRD_Sem/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/BRD_Sem/Views/Home/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BRD_Sem/Views/Home/Movies.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/BRD_Sem/Views/Movies/Movies.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BRD_Sem/Views/Home/News.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/BRD_Sem/Views/News/News.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BRD_Sem/Views/Home/Songs.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/BRD_Sem/Views/Songs/Songs.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BRD_Sem/Views/Home/Sports.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/BRD_Sem/Views/Sports/Sports.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BRD_Sem/Views/Home/TVShows.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/BRD_Sem/Views/TVShows/TVShows.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BRD_Sem/Views/Home/UserPage.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/BRD_Sem/Views/Profile/Profile.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BRD_Sem/Models/Expired.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BRD_Sem/Models/Expired.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BRD_Sem/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BRD_Sem/Startup.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BRD_Sem/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/BRD_Sem/Views/Shared/_Layout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BRD_Sem/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/BRD_Sem/appsettings.Development.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +40,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/timur/BRD_Group_Sem2/BRD_Sem/BRD_Sem/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -66,18 +59,12 @@
         <option value="$PROJECT_DIR$/BRD_Sem/Infrostructure/CommandService.cs" />
         <option value="$PROJECT_DIR$/BRD_Sem/Infrostructure/EmailSettings.cs" />
         <option value="$PROJECT_DIR$/BRD_Sem/Infrostructure/IEmailSender.cs" />
-        <option value="$PROJECT_DIR$/BRD_Sem/Startup.cs" />
-        <option value="$PROJECT_DIR$/BRD_Sem/appsettings.json" />
         <option value="$PROJECT_DIR$/BRD_Sem/Models/User.cs" />
         <option value="$PROJECT_DIR$/BRD_Sem/Infrostructure/AuthenticationService.cs" />
         <option value="$PROJECT_DIR$/BRD_Sem/Models/ViewModels/UserViewModel.cs" />
         <option value="$PROJECT_DIR$/BRD_Sem/Models/ViewModels/ProfileModels/UserViewModel.cs" />
-        <option value="$PROJECT_DIR$/BRD_Sem/Controllers/AccountController.cs" />
         <option value="$PROJECT_DIR$/BRD_Sem/Models/ViewModels/ProfileModels/PasswordChangeModel.cs" />
         <option value="$PROJECT_DIR$/BRD_Sem/Models/ViewModels/AdminPanelViewModels/PostsViewModel.cs" />
-        <option value="$PROJECT_DIR$/BRD_Sem/Models/Expired.cs" />
-        <option value="$PROJECT_DIR$/BRD_Sem/Models/ApplicationContext.cs" />
-        <option value="$PROJECT_DIR$/BRD_Sem/Infrostructure/ClaimsPrincipalExtensions.cs" />
         <option value="$PROJECT_DIR$/BRD_Sem/Models/Post.cs" />
         <option value="$PROJECT_DIR$/BRD_Sem/Controllers/ProfileController.cs" />
         <option value="$PROJECT_DIR$/BRD_Sem/Infrostructure/GetPostImage.cs" />
@@ -87,12 +74,19 @@
         <option value="$PROJECT_DIR$/BRD_Sem/Controllers/AdminPanelController.cs" />
         <option value="$PROJECT_DIR$/BRD_Sem/Controllers/HomeController.cs" />
         <option value="$PROJECT_DIR$/BRD_Sem/Views/Home/Index.cshtml" />
-        <option value="$PROJECT_DIR$/BRD_Sem/Views/Shared/_Layout.cshtml" />
         <option value="$PROJECT_DIR$/BRD_Sem/Views/Profile/ProfileEdit.cshtml" />
         <option value="$PROJECT_DIR$/BRD_Sem/Views/Profile/Profile.cshtml" />
         <option value="$PROJECT_DIR$/BRD_Sem/Views/Profile/PasswordChange.cshtml" />
         <option value="$PROJECT_DIR$/BRD_Sem/Controllers/ExpiredController.cs" />
         <option value="$PROJECT_DIR$/BRD_Sem/Views/Expired/Expired.cshtml" />
+        <option value="$PROJECT_DIR$/BRD_Sem/Startup.cs" />
+        <option value="$PROJECT_DIR$/BRD_Sem/Models/ApplicationContext.cs" />
+        <option value="$PROJECT_DIR$/BRD_Sem/appsettings.Development.json" />
+        <option value="$PROJECT_DIR$/BRD_Sem/appsettings.json" />
+        <option value="$PROJECT_DIR$/BRD_Sem/Models/Expired.cs" />
+        <option value="$PROJECT_DIR$/BRD_Sem/Infrostructure/ClaimsPrincipalExtensions.cs" />
+        <option value="$PROJECT_DIR$/BRD_Sem/Controllers/AccountController.cs" />
+        <option value="$PROJECT_DIR$/BRD_Sem/Views/Shared/_Layout.cshtml" />
       </list>
     </option>
   </component>
@@ -105,6 +99,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="ReSpellerSettingsId" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -150,7 +145,7 @@
       <updated>1622453195676</updated>
       <workItem from="1622453200455" duration="1806000" />
       <workItem from="1622628459663" duration="11458000" />
-      <workItem from="1622640195105" duration="837000" />
+      <workItem from="1622640195105" duration="3014000" />
     </task>
     <task id="LOCAL-00001" summary="Вот короче на, это с авторизацией, берешь AccountController, И делаешь под него View">
       <created>1622633049095</created>
@@ -166,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622633133902</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Профиль, Аккаунт, АдминПанель, Expired, Темплейт для остальных контроллеров, куча сервисов, туда сюда">
+      <created>1622641098790</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1622641098790</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,17 +191,18 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Вот короче на, это с авторизацией, берешь AccountController, И делаешь под него View" />
-    <option name="LAST_COMMIT_MESSAGE" value="Вот короче на, это с авторизацией, берешь AccountController, И делаешь под него View" />
+    <MESSAGE value="Профиль, Аккаунт, АдминПанель, Expired, Темплейт для остальных контроллеров, куча сервисов, туда сюда" />
+    <option name="LAST_COMMIT_MESSAGE" value="Профиль, Аккаунт, АдминПанель, Expired, Темплейт для остальных контроллеров, куча сервисов, туда сюда" />
   </component>
   <component name="WindowStateProjectService">
     <state x="277" y="57" key="SettingsEditor" timestamp="1622631274454">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1622631274454" />
-    <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1622633136079">
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1622641105295">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1622633136079" />
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1622641105295" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1622637918492">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -15,6 +15,7 @@ using Microsoft.Extensions.Logging;
 
 namespace BRD_Sem.Controllers
 {
+    [Authorize]
     public class ProfileController : Controller
     {
         private readonly ApplicationContext _dbContext;

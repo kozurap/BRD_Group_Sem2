@@ -4,12 +4,14 @@ using System.Threading.Tasks;
 using BRD_Sem.Infrostructure;
 using BRD_Sem.Models;
 using BRD_Sem.Models.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BRD_Sem.Controllers
 {
+    [Authorize(Roles = "admin")]
     public class AdminPanelController : Controller
     {
         private readonly CommandService _commandService;

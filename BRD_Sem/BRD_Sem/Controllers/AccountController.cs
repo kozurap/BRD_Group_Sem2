@@ -14,7 +14,6 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using AuthenticationService = Microsoft.AspNetCore.Authentication.AuthenticationService;
 
 namespace BRD_Sem.Controllers
 {
