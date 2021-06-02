@@ -8,6 +8,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BRD_Sem.Controllers;
+using BRD_Sem.Infrostructure;
+using BRD_Sem.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.EntityFrameworkCore;
 
 namespace BRD_Sem
 {
@@ -24,6 +29,25 @@ namespace BRD_Sem
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddDbContext<ApplicationContext>(option =>
+                option.UseNpgsql(Configuration.GetConnectionString("connectionString"), b => b.MigrationsAssembly("BRD_Sem")));
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(options =>
+                {
+                    options.LoginPath = new Microsoft.AspNetCore.Http.PathString("/Account/Register");
+                    options.AccessDeniedPath = new Microsoft.AspNetCore.Http.PathString("/Account/Login");
+                });
+
+            services.AddSingleton<CommandService>();
+            services.AddAuthorization();
+            services.AddScoped<AuthenticationService>();
+            services.Configure<EmailSettings>(Configuration.GetSection("EmailSettings"));
+            services.AddSingleton<IEmailSender, EmailService>();
+            var settings = Configuration.GetSection("EmailSettings").Get<EmailSettings>();
+            services.AddSingleton(settings);
+            services.AddSingleton(serviceProvider =>
+                new EmailConfirmationService(TimeSpan.FromMinutes(5), serviceProvider.GetService<CommandService>())
+            );
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
