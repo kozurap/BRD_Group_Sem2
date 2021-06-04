@@ -12,5 +12,6 @@ namespace BRD_Sem.Models
         public DbSet<User> Users { get; set; }
         public DbSet<Post> Posts { get; set; }
         public DbSet<Expired> Expireds { get; set; }
+        public DbSet<Music> Musics { get; set; }
     }
 }

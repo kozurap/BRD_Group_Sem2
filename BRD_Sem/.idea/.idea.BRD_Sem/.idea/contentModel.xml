@@ -12,6 +12,7 @@
           <e p="AdminPanelController.cs" t="Include" />
           <e p="ExpiredController.cs" t="Include" />
           <e p="HomeController.cs" t="Include" />
+          <e p="MusicController.cs" t="Include" />
           <e p="ProfileController.cs" t="Include" />
           <e p="SportsController.cs" t="Include" />
           <e p="StarostaController.cs" t="Include" />
@@ -29,12 +30,15 @@
         <e p="Migrations" t="Include">
           <e p="20210602141452_InitialCreate.cs" t="Include" />
           <e p="20210602141452_InitialCreate.Designer.cs" t="Include" />
+          <e p="20210604191545_Music.cs" t="Include" />
+          <e p="20210604191545_Music.Designer.cs" t="Include" />
           <e p="ApplicationContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
           <e p="ApplicationContext.cs" t="Include" />
           <e p="ErrorViewModel.cs" t="Include" />
           <e p="Expired.cs" t="Include" />
+          <e p="Music.cs" t="Include" />
           <e p="Post.cs" t="Include" />
           <e p="StudentModels" t="Include">
             <e p="IStudentsDatabaseSettings.cs" t="Include" />
@@ -89,6 +93,9 @@
           <e p="Movies" t="Include">
             <e p="Movies.cshtml" t="Include" />
           </e>
+          <e p="Music" t="Include">
+            <e p="Music.cshtml" t="Include" />
+          </e>
           <e p="News" t="Include">
             <e p="News.cshtml" t="Include" />
           </e>
@@ -100,9 +107,6 @@
             <e p="_Layout.cshtml" t="Include" />
             <e p="_ValidationScriptsPartial.cshtml" t="Include" />
             <e p="Error.cshtml" t="Include" />
-          </e>
-          <e p="Songs" t="Include">
-            <e p="Songs.cshtml" t="Include" />
           </e>
           <e p="Sports" t="Include">
             <e p="Sports.cshtml" t="Include" />
