@@ -1,0 +1,12 @@
+﻿@model BRD_Sem.Models.ViewModels.StudentsViewModel
+@{
+    ViewData["Title"] = "Список группы";
+}
+<div>
+    @foreach (var e in Model.Students)
+    {
+        <tr>
+            <td class="td-text-centered"><a>@e.Name</a></td>
+        </tr>
+    }
+</div>

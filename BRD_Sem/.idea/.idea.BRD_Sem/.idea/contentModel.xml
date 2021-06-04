@@ -14,6 +14,7 @@
           <e p="HomeController.cs" t="Include" />
           <e p="ProfileController.cs" t="Include" />
           <e p="SportsController.cs" t="Include" />
+          <e p="StarostaController.cs" t="Include" />
         </e>
         <e p="Infrostructure" t="Include">
           <e p="AuthenticationService.cs" t="Include" />
@@ -23,6 +24,7 @@
           <e p="EmailSettings.cs" t="Include" />
           <e p="GetPostImage.cs" t="Include" />
           <e p="IEmailSender.cs" t="Include" />
+          <e p="StudentsService.cs" t="Include" />
         </e>
         <e p="Migrations" t="Include">
           <e p="20210602141452_InitialCreate.cs" t="Include" />
@@ -34,6 +36,11 @@
           <e p="ErrorViewModel.cs" t="Include" />
           <e p="Expired.cs" t="Include" />
           <e p="Post.cs" t="Include" />
+          <e p="StudentModels" t="Include">
+            <e p="IStudentsDatabaseSettings.cs" t="Include" />
+            <e p="Students.cs" t="Include" />
+            <e p="StudentsDatabaseSettings.cs" t="Include" />
+          </e>
           <e p="User.cs" t="Include" />
           <e p="ViewModels" t="Include">
             <e p="AccountModels" t="Include">
@@ -46,6 +53,7 @@
               <e p="PasswordChangeModel.cs" t="Include" />
               <e p="UserViewModel.cs" t="Include" />
             </e>
+            <e p="StudentsViewModel.cs" t="Include" />
           </e>
         </e>
         <e p="obj" t="ExcludeRecursive">
@@ -98,6 +106,9 @@
           </e>
           <e p="Sports" t="Include">
             <e p="Sports.cshtml" t="Include" />
+          </e>
+          <e p="Starosta" t="Include">
+            <e p="Index.cshtml" t="Include" />
           </e>
           <e p="TVShows" t="Include">
             <e p="TVShows.cshtml" t="Include" />

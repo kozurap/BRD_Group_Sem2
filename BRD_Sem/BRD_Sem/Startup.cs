@@ -11,8 +11,10 @@ using System.Threading.Tasks;
 using BRD_Sem.Controllers;
 using BRD_Sem.Infrostructure;
 using BRD_Sem.Models;
+using BRD_Sem.Models.StudentModels;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 
 namespace BRD_Sem
 {
@@ -48,6 +50,12 @@ namespace BRD_Sem
             services.AddSingleton(serviceProvider =>
                 new EmailConfirmationService(TimeSpan.FromMinutes(5), serviceProvider.GetService<CommandService>())
             );
+            services.Configure<StudentsDatabaseSettings>(
+                Configuration.GetSection(nameof(StudentsDatabaseSettings)));
+
+            services.AddSingleton<IStudentsDatabaseSettings>(sp =>
+                sp.GetRequiredService<IOptions<StudentsDatabaseSettings>>().Value);
+            services.AddSingleton<StudentsService>();
             services.AddControllersWithViews();
             services.AddHttpContextAccessor();
         }
