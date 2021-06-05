@@ -13,39 +13,39 @@
     <div class="offset-2">
         <h3>Create new account</h3>
         <div class="col-9">
-            <form asp-controller="Account" asp-action="Register">
+            <form action="" method="post">
                 <div class="form-group">
                     <label for="regMail">
                         Ваша почта
                     </label>
-                    <input type="email" class="form-control" id="regMail" aria-describedby="emailHelp" placeholder="Enter email" />
+                    <input type="email" name="Email" class="form-control" id="regMail" aria-describedby="emailHelp" placeholder="Enter email" />
                 </div>
                 <div class="form-group">
                     <label for="regName">
                         Ваше Имя
                     </label>
-                    <input type="text" class="form-control" id="regName" placeholder="Enter name" />
+                    <input type="text" name="Name" class="form-control" id="regName" placeholder="Enter name" />
                 </div>
                 <div class="form-group">
                     <label for="regSurname">
                         Ваша Фамилия
                     </label>
-                    <input type="text" class="form-control" id="regSurname" placeholder="Enter surname" />
+                    <input type="text" name="Surname" class="form-control" id="regSurname" placeholder="Enter surname" />
                 </div>
                 <div class="form-group">
                     <label for="regPassword">
                         Ваш пароль
                     </label>
-                    <input type="password" class="form-control" id="regPassword" placeholder="Enter password" />
+                    <input type="password" name="Password" class="form-control" id="regPassword" placeholder="Enter password" />
                 </div>
                 <div class="form-group">
                     <label for="regConfPassword">
                         Подтвердите Пароль
                     </label>
-                    <input type="password" class="form-control" id="regConfPassword" placeholder="Confirm your password" />
+                    <input type="password" name="ConfirmPassword" class="form-control" id="regConfPassword" placeholder="Confirm your password" />
                 </div>
                 <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="regRemember">
+                    <input type="checkbox" name="RememberMe" class="form-check-input" id="regRemember">
                     <label class="form-check-label" for="regRemember">Remember me</label>
                 </div>
                 <div class="form-group">

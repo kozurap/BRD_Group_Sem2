@@ -1,6 +1,6 @@
 ﻿<body>
     <div>
-        <form asp-controller="Profile" asp-action="ProfileEdit" method="post">
+        <form asp-action="ProfileEdit" method="post">
             <div class="form-group">
                 <label for="regName">
                     Введите Новое Имя
@@ -17,7 +17,7 @@
                 <input type="submit" value="Save Changes" class="btn btn-primary" />
             </div>
         </form>
-        <form asp-controller="Profile" asp-action="ProfileEditPassword" method="post">
+        <form asp-action="ProfileEditPassword" method="post">
             <div class="form-group">
                 <label for="oldPass">
                     Введите свой старый Пароль
@@ -40,7 +40,8 @@
                 <input type="submit" value="Update Password" class="btn btn-primary" />
             </div>
         </form>
-        <form asp-controller="Profile" asp-action="UploadImage" method="post">
+
+        <form asp-action="UploadImage" method="post">
             <div class="form-group">
                 <h5>New Avatar</h5>
                 <input type="file" accept="image/jpeg,image/png" class="form-control-file mt-1" id="newAvatar">

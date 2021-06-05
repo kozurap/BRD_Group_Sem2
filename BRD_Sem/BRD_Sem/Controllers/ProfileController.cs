@@ -31,7 +31,7 @@ namespace BRD_Sem.Controllers
         }
 
         [Route("~/profile/{userId:int?}")]
-        public IActionResult Profile(int userId)
+        public IActionResult Profile(int userId =-1)
         {
             if (userId == -1)
                 if (User.Identity.IsAuthenticated)
@@ -55,6 +55,7 @@ namespace BRD_Sem.Controllers
 
         [HttpGet]
         [Authorize]
+        [Route("~/Profile/ProfileEdit")]
         public IActionResult ProfileEdit()
         {
             int userId = Int32.Parse(User.FindFirst("id").Value);

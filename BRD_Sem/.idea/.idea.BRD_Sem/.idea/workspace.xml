@@ -22,9 +22,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="189c02f8-adb1-44a2-b5fb-2b1126a9ced3" name="Default Changelist" comment="Зафиксил бд">
+    <list default="true" id="189c02f8-adb1-44a2-b5fb-2b1126a9ced3" name="Default Changelist" comment="Добавил View для подтверждения по Email">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BRD_Sem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BRD_Sem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BRD_Sem/Migrations/20210604191545_Music.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BRD_Sem/Migrations/20210605063012_Music.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BRD_Sem/Controllers/AccountController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BRD_Sem/Controllers/AccountController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BRD_Sem/Controllers/ProfileController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BRD_Sem/Controllers/ProfileController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BRD_Sem/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BRD_Sem/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BRD_Sem/Views/Account/Login.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/BRD_Sem/Views/Account/Login.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BRD_Sem/Views/Account/Register.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/BRD_Sem/Views/Account/Register.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BRD_Sem/Views/Profile/ProfileEdit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/BRD_Sem/Views/Profile/ProfileEdit.cshtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,12 +39,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7AD3B931-A214-4DE8-ABE3-D039F06C7A53/194/ObjectMethodExecutor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7AD3B931-A214-4DE8-ABE3-D039F06C7A53/F3/ActionMethodExecutor.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/BRD_Sem/Models/ViewModels/AccountModels/LoginModel.cs" />
-        <option value="$PROJECT_DIR$/BRD_Sem/Models/ViewModels/AccountModels/RegisterModel.cs" />
-        <option value="$PROJECT_DIR$/BRD_Sem/Models/ViewModels/AccountModels/SignUpAndInModel.cs" />
         <option value="$PROJECT_DIR$/BRD_Sem/Views/Home/AdminPage.cshtml" />
         <option value="$PROJECT_DIR$/BRD_Sem/Infrostructure/EmailConfirmationService.cs" />
         <option value="$PROJECT_DIR$/BRD_Sem/Infrostructure/EmailService.cs" />
@@ -59,7 +65,6 @@
         <option value="$PROJECT_DIR$/BRD_Sem/Controllers/SportsController.cs" />
         <option value="$PROJECT_DIR$/BRD_Sem/Controllers/HomeController.cs" />
         <option value="$PROJECT_DIR$/BRD_Sem/Views/Home/Index.cshtml" />
-        <option value="$PROJECT_DIR$/BRD_Sem/Views/Profile/ProfileEdit.cshtml" />
         <option value="$PROJECT_DIR$/BRD_Sem/Views/Profile/Profile.cshtml" />
         <option value="$PROJECT_DIR$/BRD_Sem/Views/Profile/PasswordChange.cshtml" />
         <option value="$PROJECT_DIR$/BRD_Sem/Controllers/ExpiredController.cs" />
@@ -69,25 +74,29 @@
         <option value="$PROJECT_DIR$/BRD_Sem/Infrostructure/ClaimsPrincipalExtensions.cs" />
         <option value="$PROJECT_DIR$/BRD_Sem/Views/Shared/_Layout.cshtml" />
         <option value="$PROJECT_DIR$/BRD_Sem/Controllers/AdminPanelController.cs" />
-        <option value="$PROJECT_DIR$/BRD_Sem/Controllers/ProfileController.cs" />
         <option value="$PROJECT_DIR$/BRD_Sem/Models/StudentList.cs" />
         <option value="$PROJECT_DIR$/BRD_Sem/Models/Students.cs" />
         <option value="$PROJECT_DIR$/BRD_Sem/appsettings.json" />
         <option value="$PROJECT_DIR$/BRD_Sem/Models/StudentModels/Students.cs" />
         <option value="$PROJECT_DIR$/BRD_Sem/Models/StudentModels/IStudentsDatabaseSettings.cs" />
         <option value="$PROJECT_DIR$/BRD_Sem/Models/StudentModels/StudentsDatabaseSettings.cs" />
-        <option value="$PROJECT_DIR$/BRD_Sem/Controllers/AccountController.cs" />
         <option value="$PROJECT_DIR$/BRD_Sem/Infrastructure/AuthenticationService.cs" />
         <option value="$PROJECT_DIR$/BRD_Sem/Infrostructure/StudentsService.cs" />
         <option value="$PROJECT_DIR$/BRD_Sem/Models/ViewModels/StudentsViewModel.cs" />
         <option value="$PROJECT_DIR$/BRD_Sem/Views/Starosta/Index.cshtml" />
-        <option value="$PROJECT_DIR$/BRD_Sem/Startup.cs" />
         <option value="$PROJECT_DIR$/BRD_Sem/Controllers/StarostaController.cs" />
         <option value="$PROJECT_DIR$/BRD_Sem/Models/ApplicationContext.cs" />
         <option value="$PROJECT_DIR$/BRD_Sem/wwwroot/js/site.js" />
         <option value="$PROJECT_DIR$/BRD_Sem/Models/Music.cs" />
         <option value="$PROJECT_DIR$/BRD_Sem/Controllers/MusicController.cs" />
         <option value="$PROJECT_DIR$/BRD_Sem/Views/Account/ConfirmEmail.cshtml" />
+        <option value="$PROJECT_DIR$/BRD_Sem/Views/Account/EmailConfirmationEnd.cshtml" />
+        <option value="$PROJECT_DIR$/BRD_Sem/Views/Account/Register.cshtml" />
+        <option value="$PROJECT_DIR$/BRD_Sem/Views/Account/Login.cshtml" />
+        <option value="$PROJECT_DIR$/BRD_Sem/Controllers/AccountController.cs" />
+        <option value="$PROJECT_DIR$/BRD_Sem/Startup.cs" />
+        <option value="$PROJECT_DIR$/BRD_Sem/Controllers/ProfileController.cs" />
+        <option value="$PROJECT_DIR$/BRD_Sem/Views/Profile/ProfileEdit.cshtml" />
       </list>
     </option>
   </component>
@@ -98,6 +107,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.3502052" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.3002736" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -149,7 +160,7 @@
       <workItem from="1622640195105" duration="3322000" />
       <workItem from="1622825837256" duration="99000" />
       <workItem from="1622827281395" duration="6200000" />
-      <workItem from="1622872831009" duration="2743000" />
+      <workItem from="1622872831009" duration="5239000" />
     </task>
     <task id="LOCAL-00001" summary="Вот короче на, это с авторизацией, берешь AccountController, И делаешь под него View">
       <created>1622633049095</created>
@@ -200,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622874728243</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Добавил View для подтверждения по Email">
+      <created>1622875688606</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1622875688606</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,9 +246,90 @@
     <MESSAGE value="МангоДБ, Че то там еще, Староста контроллер чисто контроллирую короче, роль старосты (там надо 3 роли по требованиям)(Зачем?)" />
     <MESSAGE value="Добавил Музыку чтобы она тоже аяксом делалась" />
     <MESSAGE value="Зафиксил бд" />
-    <option name="LAST_COMMIT_MESSAGE" value="Зафиксил бд" />
+    <MESSAGE value="Добавил View для подтверждения по Email" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил View для подтверждения по Email" />
   </component>
   <component name="WindowStateProjectService">
+    <state width="1493" height="288" key="GridCell.Tab.0.bottom" timestamp="1622877899114">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="288" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1622877899114" />
+    <state width="1493" height="288" key="GridCell.Tab.0.center" timestamp="1622877899114">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="288" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1622877899114" />
+    <state width="1493" height="288" key="GridCell.Tab.0.left" timestamp="1622877899114">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="288" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1622877899114" />
+    <state width="1493" height="288" key="GridCell.Tab.0.right" timestamp="1622877899114">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="288" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1622877899114" />
+    <state width="1493" height="288" key="GridCell.Tab.1.bottom" timestamp="1622877906053">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="288" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1622877906053" />
+    <state width="1493" height="288" key="GridCell.Tab.1.center" timestamp="1622877906053">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="288" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1622877906053" />
+    <state width="1493" height="288" key="GridCell.Tab.1.left" timestamp="1622877906052">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="288" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1622877906052" />
+    <state width="1493" height="288" key="GridCell.Tab.1.right" timestamp="1622877906053">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="288" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1622877906053" />
+    <state width="1493" height="288" key="GridCell.Tab.2.bottom" timestamp="1622877898951">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="288" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1622877898951" />
+    <state width="1493" height="288" key="GridCell.Tab.2.center" timestamp="1622877898951">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="288" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1622877898951" />
+    <state width="1493" height="288" key="GridCell.Tab.2.left" timestamp="1622877898951">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="288" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1622877898951" />
+    <state width="1493" height="288" key="GridCell.Tab.2.right" timestamp="1622877898951">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="288" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1622877898951" />
+    <state width="1493" height="288" key="GridCell.Tab.3.bottom" timestamp="1622877898951">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="288" key="GridCell.Tab.3.bottom/0.0.1536.824@0.0.1536.824" timestamp="1622877898951" />
+    <state width="1493" height="288" key="GridCell.Tab.3.center" timestamp="1622877898951">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="288" key="GridCell.Tab.3.center/0.0.1536.824@0.0.1536.824" timestamp="1622877898951" />
+    <state width="1493" height="288" key="GridCell.Tab.3.left" timestamp="1622877898951">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="288" key="GridCell.Tab.3.left/0.0.1536.824@0.0.1536.824" timestamp="1622877898951" />
+    <state width="1493" height="288" key="GridCell.Tab.3.right" timestamp="1622877898951">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="288" key="GridCell.Tab.3.right/0.0.1536.824@0.0.1536.824" timestamp="1622877898951" />
+    <state width="1493" height="288" key="GridCell.Tab.4.bottom" timestamp="1622877898951">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="288" key="GridCell.Tab.4.bottom/0.0.1536.824@0.0.1536.824" timestamp="1622877898951" />
+    <state width="1493" height="288" key="GridCell.Tab.4.center" timestamp="1622877898951">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="288" key="GridCell.Tab.4.center/0.0.1536.824@0.0.1536.824" timestamp="1622877898951" />
+    <state width="1493" height="288" key="GridCell.Tab.4.left" timestamp="1622877898951">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="288" key="GridCell.Tab.4.left/0.0.1536.824@0.0.1536.824" timestamp="1622877898951" />
+    <state width="1493" height="288" key="GridCell.Tab.4.right" timestamp="1622877898951">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="288" key="GridCell.Tab.4.right/0.0.1536.824@0.0.1536.824" timestamp="1622877898951" />
     <state x="597" y="98" key="RiderGenerateDialog" timestamp="1622830339031">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -239,13 +338,58 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1622631274454" />
-    <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1622874729765">
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1622875689981">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1622874729765" />
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1622875689981" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1622637918492">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1622637918492" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/BRD_Sem/Controllers/AccountController.cs</url>
+          <line>88</line>
+          <properties documentPath="C:\Users\timur\BRD_Group_Sem2\BRD_Sem\BRD_Sem\Controllers\AccountController.cs" initialLine="87">
+            <startOffsets>
+              <option value="2832" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3272" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/BRD_Sem/Infrostructure/AuthenticationService.cs</url>
+          <line>50</line>
+          <properties documentPath="C:\Users\timur\BRD_Group_Sem2\BRD_Sem\BRD_Sem\Infrostructure\AuthenticationService.cs" initialLine="50">
+            <startOffsets>
+              <option value="1990" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1991" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/BRD_Sem/Controllers/ProfileController.cs</url>
+          <line>59</line>
+          <properties documentPath="C:\Users\timur\BRD_Group_Sem2\BRD_Sem\BRD_Sem\Controllers\ProfileController.cs" initialLine="59">
+            <startOffsets>
+              <option value="1938" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1939" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
