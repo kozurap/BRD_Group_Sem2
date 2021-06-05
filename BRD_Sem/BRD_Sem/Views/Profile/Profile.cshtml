@@ -11,13 +11,13 @@
         </div>
     </div>
     <div class="user-info">
-        <h4>Username</h4>
-        <p>sas</p>
-        <h4>E-mail</h4>
-        <p>a@mog.us</p>
-        <h4>Phone number</h4>
-        <p>88005553535</p>
-        <button type="button" class="btn btn-primary mt-2" data-toggle="modal" data-target="#profedit">Edit</button>
+        <h4>Name</h4>
+        <p>@Model.Name</p>
+        <h4>Surname</h4>
+        <p>@Model.Surname</p>
+        <h4>E-Mail</h4>
+        <p>@Model.Email</p>
+        <a class="nav-link" asp-controller="Profile" asp-action="ProfileEdit">Edit</a>
     </div>
     
 </div>

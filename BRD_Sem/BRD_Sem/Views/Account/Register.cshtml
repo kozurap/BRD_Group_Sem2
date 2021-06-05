@@ -1,0 +1,77 @@
+﻿@model BRD_Sem.Models.ViewModels.AccountModels.RegisterModel
+@{
+    Layout = null;
+}
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - BRD_Sem</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <div class="offset-2">
+        <h3>Create new account</h3>
+        <div class="col-9">
+            <form asp-controller="Account" asp-action="Register">
+                <div class="form-group">
+                    <label for="regMail">
+                        Ваша почта
+                    </label>
+                    <input type="email" class="form-control" id="regMail" aria-describedby="emailHelp" placeholder="Enter email" />
+                </div>
+                <div class="form-group">
+                    <label for="regName">
+                        Ваше Имя
+                    </label>
+                    <input type="text" class="form-control" id="regName" placeholder="Enter name" />
+                </div>
+                <div class="form-group">
+                    <label for="regSurname">
+                        Ваша Фамилия
+                    </label>
+                    <input type="text" class="form-control" id="regSurname" placeholder="Enter surname" />
+                </div>
+                <div class="form-group">
+                    <label for="regPassword">
+                        Ваш пароль
+                    </label>
+                    <input type="password" class="form-control" id="regPassword" placeholder="Enter password" />
+                </div>
+                <div class="form-group">
+                    <label for="regConfPassword">
+                        Подтвердите Пароль
+                    </label>
+                    <input type="password" class="form-control" id="regConfPassword" placeholder="Confirm your password" />
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="regRemember">
+                    <label class="form-check-label" for="regRemember">Remember me</label>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create Account" class="btn btn-primary" />
+                </div>
+            </form>
+            <div>
+                <div>
+                    Already have an account?
+                    <a asp-controller="Account" asp-action="Login">Log in</a>
+                </div>
+                <div>
+                    <a asp-controller="Home" asp-action="Index">Back to the site</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+<footer class="footer">
+    <div class="container">
+        <div class="text-center">
+            <span style="color:whitesmoke">Created By <a href="#">BRD</a>, 2021</span>
+        </div>
+    </div>
+</footer>

@@ -43,6 +43,9 @@ namespace BRD_Sem
             services.AddSingleton<CommandService>();
             services.AddAuthorization();
             services.AddScoped<AuthenticationService>();
+            //вставил вот эту хуйню снизу, чтобы работало
+            services.AddScoped<GetPostImage>();
+            //конец вставленной хуйни
             services.Configure<EmailSettings>(Configuration.GetSection("EmailSettings"));
             services.AddSingleton<IEmailSender, EmailService>();
             var settings = Configuration.GetSection("EmailSettings").Get<EmailSettings>();

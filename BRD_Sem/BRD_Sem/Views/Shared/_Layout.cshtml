@@ -12,18 +12,32 @@
 <body>
     <!--Navbar починить строку поиска-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light" id="navFix">
-        <a class="navbar-brand" href="#"><img src="/img/logo.png" /></a>
+        <a class="navbar-brand" asp-controller="Home" asp-action="Index"><img src="/img/logo.png" /></a>
         <form style="width:65%">
             <input class="form-control" type="text" placeholder="Search" aria-label="Search">
         </form>
         <ul class="navbar-nav">
-            <li class="nav-item m-1">
-                <button type="button" id="btnsup" class="btn btn-primary" data-toggle="modal" data-target="#supmodal">Sign Up</button>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <li class="nav-item m-1">
+                    <a class="nav-link" style="color:aqua" asp-controller="Profile" asp-action="Profile">My Profile</a>
 
-            </li>
-            <li class="nav-item m-1">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sinmodal">Sign In</button>
-            </li>
+                </li>
+                <li class="nav-item m-1">
+                    <a class="nav-link" style="color:aqua" asp-controller="Account" asp-action="Logout">Log Out</a>
+                </li>
+            }
+            else
+            {
+                <li class="nav-item m-1">
+                    <a class="nav-link" style="color:aqua" asp-controller="Account" asp-action="Register">Sign Up</a>
+
+                </li>
+                <li class="nav-item m-1">
+                    <a class="nav-link" style="color:aqua" asp-controller="Account" asp-action="Login">Sign In</a>
+                </li>
+            }
+
         </ul>
         <button class="navbar-toggler"
                 type="button"
@@ -41,10 +55,10 @@
                     <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" asp-area="" asp-controller="Home" asp-action="TVShows">TV Shows</a>
+                    <a class="nav-link" asp-area="" asp-controller="TVShows" asp-action="TVShows">TV Shows</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" asp-area="" asp-controller="Home" asp-action="History">History</a>
+                    <a class="nav-link" asp-area="" asp-controller="Expired" asp-action="Expired">History</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link nav-link-collapse"
@@ -56,17 +70,17 @@
                        aria-expanded="false">Movies</a>
                     <ul class="nav-second-level collapse" id="collapseSubItems2" data-parent="#navAccordion">
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Movies">
+                            <a class="nav-link" asp-area="" asp-controller="Movies" asp-action="Movies">
                                 <span class="nav-link-text">English</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Movies">
+                            <a class="nav-link" asp-area="" asp-controller="Movies" asp-action="Movies">
                                 <span class="nav-link-text">Russian</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Movies">
+                            <a class="nav-link" asp-area="" asp-controller="Movies" asp-action="Movies">
                                 <span class="nav-link-text">German</span>
                             </a>
                         </li>
@@ -104,18 +118,12 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Songs">Songs</a>
+                    <a class="nav-link" asp-area="" asp-controller="Music" asp-action="Music">Songs</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" asp-area="" asp-controller="Home" asp-action="News">News</a>
+                    <a class="nav-link" asp-area="" asp-controller="News" asp-action="News">News</a>
                 </li>
                 <li class="nav-item col-md-3 col-lg" id="credits">
-                    <div class="side-bottom-icons">
-                        <div>s</div>
-                        <div>s</div>
-                        <div>s</div>
-                        <div>s</div>
-                    </div>
                     <div class="copyright">
                         <p style="color:white">BRD, 2021</p>
                     </div>
@@ -124,90 +132,6 @@
 
         </div>
     </nav>
-    <!--Sign up-->
-    <div class="modal fade" id="supmodal" tabindex="-1" role="dialog" aria-labelledby="signUp" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3 class="modal-title align-content-center" id="signUp">Create Account</h3>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body" id="signUpBody">
-                    <div class="social-sits">
-                        <div class="facebook-button">
-                            <a href="#">Connect with Facebook</a>
-                        </div>
-                        <div class="chrome-button">
-                            <a href="#">Connect with Google</a>
-                        </div>
-                        <div class="button-bottom">
-                            <p>
-                                Already have an account?
-                                <a href="#" data-toggle="modal" data-target="#sinmodal" data-dismiss="modal">Login</a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="signup mt-2">
-                        <form>
-                            <input type="email" class="form-control mt-1" id="email">
-                            <input type="password" class="form-control mt-1" id="password">
-                            <input type="number" class="form-control mt-1" id="phonenum">
-                        </form>
-                        <div class="continue-button">
-                            <button type="button" class="btn btn-primary mt-1">
-                                SIGN UP
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--Sign in-->
-    <div class="modal fade" id="sinmodal" tabindex="-1" role="dialog" aria-labelledby="signIn" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3 class="modal-title align-content-center" id="signIn">Login</h3>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body" id="signInBody">
-                    <div class="social-sits">
-                        <div class="facebook-button">
-                            <a href="#">Connect with Facebook</a>
-                        </div>
-                        <div class="chrome-button">
-                            <a href="#">Connect with Google</a>
-                        </div>
-                        <div class="button-bottom">
-                            <p>
-                                New Account?
-                                <a href="#" data-toggle="modal" data-target="#supmodal" data-dismiss="modal">Sign Up</a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="signin mt-2">
-                        <form>
-                            <input type="email" class="form-control mt-1" id="email">
-                            <input type="password" class="form-control mt-1" id="password">
-                        </form>
-                        <div class="continue-button">
-                            <button type="button" class="btn btn-primary mt-1">
-                                LOG IN
-                            </button>
-                        </div>
-                        <div class="forgot">
-                            <a href="#">Forgot Password?</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <div class="container-fluid" id="mainBody">
         <main role="main" class="pb-3 offset-lg-2">

@@ -1,229 +1,97 @@
-﻿@{
+﻿@model BRD_Sem.Models.ViewModels.PostsViewModel
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="main-grids">
     <div class="top-grids">
         <div class="recommended-info">
-            <h3>Recent Videos</h3>
+            <h3>Movies</h3>
         </div>
         <!--Первый ряд говна, тут всегда три видео можно ебануть форму и модель-->
         <div class="row">
-            <div class="col-md-4 resent-grid recommended-grid slider-top-grids">
-                <div class="resent-grid-img recommended-grid-img">
-                    <a href="#">
-                        <img class="img-fluid" src="/img/t1.jpg" />
-                    </a>
-                </div>
-                <div class="resent-grid-info recommended-grid-info">
-                    <h3>
-                        <a href="#" class="title title-info">Kal</a>
-                    </h3>
-                    <a href="#" class="author">Truhin</a>
-                </div>
-            </div>
-            <div class="col-md-4 resent-grid recommended-grid slider-top-grids">
-                <div class="resent-grid-img recommended-grid-img">
-                    <a href="#">
-                        <img class="img-fluid" src="/img/t1.jpg" />
-                    </a>
-                </div>
-                <div class="resent-grid-info recommended-grid-info">
-                    <h3>
-                        <a href="#" class="title title-info">Kal</a>
-                    </h3>
-                    <a href="#" class="author">Truhin</a>
-                </div>
-            </div>
-            <div class="col-md-4 resent-grid recommended-grid slider-top-grids">
-                <div class="resent-grid-img recommended-grid-img">
-                    <a href="#">
-                        <img class="img-fluid" src="/img/t1.jpg" />
-                    </a>
-                </div>
-                <div class="resent-grid-info recommended-grid-info">
-                    <h3>
-                        <a href="#" class="title title-info">Kal</a>
-                    </h3>
-                    <a href="#" class="author">Truhin</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="recommended" style="margin-top:2em">
-        <div class="recommended-grids">
-            <div class="recommended-info">
-                <h3>Animated Cartoon</h3>
-            </div>
-            <div class="row">
-                <div class="col-md-3 resent-grid recommended-grid slider-first">
-                    <div class="resent-grid-img recommended-grid-img">
-                        <a asp-area="" asp-controller="Home" asp-action="ContentPage">
-                            <img class="img-fluid" src="/img/t1.jpg" />
-                        </a>
-                    </div>
-                    <div class="resent-grid-info recommended-grid-info">
-                        <h3>
-                            <a href="#" class="title title-info">Kal</a>
-                        </h3>
-                        <a href="#" class="author">Truhin</a>
-                    </div>
-                </div>
-                <div class="col-md-3 resent-grid recommended-grid slider-first">
-                    <div class="resent-grid-img recommended-grid-img">
-                        <a asp-area="" asp-controller="Profile" asp-action="Profile">
-                            <img class="img-fluid" src="/img/t1.jpg" />
-                        </a>
-                    </div>
-                    <div class="resent-grid-info recommended-grid-info">
-                        <h3>
-                            <a href="#" class="title title-info">Kal</a>
-                        </h3>
-                        <a href="#" class="author">Truhin</a>
-                    </div>
-                </div>
-                <div class="col-md-3 resent-grid recommended-grid slider-first">
-                    <div class="resent-grid-img recommended-grid-img">
-                        <a asp-area="" asp-controller="AdminPanel" asp-action="Index">
-                            <img class="img-fluid" src="/img/t1.jpg" />
-                        </a>
-                    </div>
-                    <div class="resent-grid-info recommended-grid-info">
-                        <h3>
-                            <a href="#" class="title title-info">Kal</a>
-                        </h3>
-                        <a href="#" class="author">Truhin</a>
-                    </div>
-                </div>
-                <div class="col-md-3 resent-grid recommended-grid slider-first">
-                    <div class="resent-grid-img recommended-grid-img">
-                        <a href="#">
-                            <img class="img-fluid" src="/img/t1.jpg" />
-                        </a>
-                    </div>
-                    <div class="resent-grid-info recommended-grid-info">
-                        <h3>
-                            <a href="#" class="title title-info">Kal</a>
-                        </h3>
-                        <a href="#" class="author">Truhin</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="recommended" style="margin-top:2em">
-        <div class="recommended-grids">
-            <div class="recommended-info">
-                <h3>Recommended</h3>
-            </div>
-            <div class="row">
-                <div class="col-md-3 resent-grid recommended-grid slider-first">
-                    <div class="resent-grid-img recommended-grid-img">
-                        <a href="#">
-                            <img class="img-fluid" src="/img/t1.jpg" />
-                        </a>
-                    </div>
-                    <div class="resent-grid-info recommended-grid-info">
-                        <h3>
-                            <a href="#" class="title title-info">Kal</a>
-                        </h3>
-                        <a href="#" class="author">Truhin</a>
-                    </div>
-                </div>
-                <div class="col-md-3 resent-grid recommended-grid slider-first">
-                    <div class="resent-grid-img recommended-grid-img">
-                        <a href="#">
-                            <img class="img-fluid" src="/img/t1.jpg" />
-                        </a>
-                    </div>
-                    <div class="resent-grid-info recommended-grid-info">
-                        <h3>
-                            <a href="#" class="title title-info">Kal</a>
-                        </h3>
-                        <a href="#" class="author">Truhin</a>
-                    </div>
-                </div>
-                <div class="col-md-3 resent-grid recommended-grid slider-first">
-                    <div class="resent-grid-img recommended-grid-img">
-                        <a href="#">
-                            <img class="img-fluid" src="/img/t1.jpg" />
-                        </a>
+            @{ int mCount = 0; }
+            @foreach (var e in Model.Posts)
+            {
+                if (e.Category == "Movie" && mCount < 3) 
+                {
+                    <div class="col-md-4 resent-grid recommended-grid slider-top-grids">
+                        <div class="resent-grid-img recommended-grid-img">
+                            <a href="#">
+                                <img class="img-fluid" src="@Url.Content("~/"+e.Id + "/image")" />
+                            </a>
+                        </div>
+                        <div class="resent-grid-info recommended-grid-info">
+                            <h3>
+                                <a href="#" class="title title-info">@e.Description</a>
+                            </h3>
+                            <a href="#" class="author">@e.AuthorName</a>
+                        </div>
+                    </div>   
+                    mCount++;
+                }
+            }
 
-                    </div>
-                    <div class="resent-grid-info recommended-grid-info">
-                        <h3>
-                            <a href="#" class="title title-info">Kal</a>
-                        </h3>
-                        <a href="#" class="author">Truhin</a>
-                    </div>
-                </div>
-                <div class="col-md-3 resent-grid recommended-grid slider-first">
-                    <div class="resent-grid-img recommended-grid-img">
-                        <a href="#">
-                            <img class="img-fluid" src="/img/t1.jpg" />
-                        </a>
-                    </div>
-                    <div class="resent-grid-info recommended-grid-info">
-                        <h3>
-                            <a href="#" class="title title-info">Kal</a>
-                        </h3>
-                        <a href="#" class="author">Truhin</a>
-                    </div>
-                </div>
+        </div>
+    </div>
+    <div class="recommended" style="margin-top:2em">
+        <div class="recommended-grids">
+            <div class="recommended-info">
+                <h3>TV Shows</h3>
             </div>
             <div class="row">
-                <div class="col-md-3 resent-grid recommended-grid slider-first">
-                    <div class="resent-grid-img recommended-grid-img">
-                        <a href="#">
-                            <img class="img-fluid" src="/img/t1.jpg" />
-                        </a>
-                    </div>
-                    <div class="resent-grid-info recommended-grid-info">
-                        <h3>
-                            <a href="#" class="title title-info">Kal</a>
-                        </h3>
-                        <a href="#" class="author">Truhin</a>
-                    </div>
-                </div>
-                <div class="col-md-3 resent-grid recommended-grid slider-first">
-                    <div class="resent-grid-img recommended-grid-img">
-                        <a href="#">
-                            <img class="img-fluid" src="/img/t1.jpg" />
-                        </a>
-                    </div>
-                    <div class="resent-grid-info recommended-grid-info">
-                        <h3>
-                            <a href="#" class="title title-info">Kal</a>
-                        </h3>
-                        <a href="#" class="author">Truhin</a>
-                    </div>
-                </div>
-                <div class="col-md-3 resent-grid recommended-grid slider-first">
-                    <div class="resent-grid-img recommended-grid-img">
-                        <a href="#">
-                            <img class="img-fluid" src="/img/t1.jpg" />
-                        </a>
-                    </div>
-                    <div class="resent-grid-info recommended-grid-info">
-                        <h3>
-                            <a href="#" class="title title-info">Kal</a>
-                        </h3>
-                        <a href="#" class="author">Truhin</a>
-                    </div>
-                </div>
-                <div class="col-md-3 resent-grid recommended-grid slider-first">
-                    <div class="resent-grid-img recommended-grid-img">
-                        <a href="#">
-                            <img class="img-fluid" src="/img/t1.jpg" />
-                        </a>
-                    </div>
-                    <div class="resent-grid-info recommended-grid-info">
-                        <h3>
-                            <a href="#" class="title title-info">Kal</a>
-                        </h3>
-                        <a href="#" class="author">Truhin</a>
-                    </div>
-                </div>
+                @{int tvCount = 0; }
+                @foreach (var e in Model.Posts)
+                {
+                    if (e.Category == "TV Show" && tvCount < 4)
+                    {
+                        <div class="col-md-3 resent-grid recommended-grid slider-first">
+                            <div class="resent-grid-img recommended-grid-img">
+                                <a href="#">
+                                    <img class="img-fluid" src="@Url.Content("~/"+e.Id + "/image")" />
+                                </a>
+                            </div>
+                            <div class="resent-grid-info recommended-grid-info">
+                                <h3>
+                                    <a href="#" class="title title-info">@e.Description</a>
+                                </h3>
+                                <a href="#" class="author">@e.AuthorName</a>
+                            </div>
+                        </div>
+                        tvCount++;
+                    }
+                }
+            </div>
+        </div>
+    </div>
+    <div class="recommended" style="margin-top:2em">
+        <div class="recommended-grids">
+            <div class="recommended-info">
+                <h3>News</h3>
+            </div>
+            <div class="row">
+                @{ int nCount = 0;}
+                @foreach (var e in Model.Posts)
+                {
+                    if (e.Category == "News" && nCount < 8)
+                    {
+                        <div class="col-md-3 resent-grid recommended-grid slider-first">
+                            <div class="resent-grid-img recommended-grid-img">
+                                <a href="#">
+                                    <img class="img-fluid" src="@Url.Content("~/"+e.Id + "/image")" />
+                                </a>
+                            </div>
+                            <div class="resent-grid-info recommended-grid-info">
+                                <h3>
+                                    <a href="#" class="title title-info">@e.Description</a>
+                                </h3>
+                                <a href="#" class="author">@e.AuthorName</a>
+                            </div>
+                        </div>
+                        nCount++;
+                    }
+
+                }
             </div>
         </div>
     </div>
@@ -246,99 +114,27 @@
                         <a href="#" class="author">Truhin</a>
                     </div>
                 </div>
-                <div class="col-md-3 resent-grid recommended-grid slider-first">
-                    <div class="resent-grid-img recommended-grid-img">
-                        <a href="#">
-                            <img class="img-fluid" src="/img/t1.jpg" />
-                        </a>
-                    </div>
-                    <div class="resent-grid-info recommended-grid-info">
-                        <h3>
-                            <a href="#" class="title title-info">Kal</a>
-                        </h3>
-                        <a href="#" class="author">Truhin</a>
-                    </div>
-                </div>
-                <div class="col-md-3 resent-grid recommended-grid slider-first">
-                    <div class="resent-grid-img recommended-grid-img">
-                        <a href="#">
-                            <img class="img-fluid" src="/img/t1.jpg" />
-                        </a>
-                    </div>
-                    <div class="resent-grid-info recommended-grid-info">
-                        <h3>
-                            <a href="#" class="title title-info">Kal</a>
-                        </h3>
-                        <a href="#" class="author">Truhin</a>
-                    </div>
-                </div>
-                <div class="col-md-3 resent-grid recommended-grid slider-first">
-                    <div class="resent-grid-img recommended-grid-img">
-                        <a href="#">
-                            <img class="img-fluid" src="/img/t1.jpg" />
-                        </a>
-                    </div>
-                    <div class="resent-grid-info recommended-grid-info">
-                        <h3>
-                            <a href="#" class="title title-info">Kal</a>
-                        </h3>
-                        <a href="#" class="author">Truhin</a>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-3 resent-grid recommended-grid slider-first">
-                    <div class="resent-grid-img recommended-grid-img">
-                        <a href="#">
-                            <img class="img-fluid" src="/img/t1.jpg" />
-                        </a>
-                    </div>
-                    <div class="resent-grid-info recommended-grid-info">
-                        <h3>
-                            <a href="#" class="title title-info">Kal</a>
-                        </h3>
-                        <a href="#" class="author">Truhin</a>
-                    </div>
-                </div>
-                <div class="col-md-3 resent-grid recommended-grid slider-first">
-                    <div class="resent-grid-img recommended-grid-img">
-                        <a href="#">
-                            <img class="img-fluid" src="/img/t1.jpg" />
-                        </a>
-                    </div>
-                    <div class="resent-grid-info recommended-grid-info">
-                        <h3>
-                            <a href="#" class="title title-info">Kal</a>
-                        </h3>
-                        <a href="#" class="author">Truhin</a>
-                    </div>
-                </div>
-                <div class="col-md-3 resent-grid recommended-grid slider-first">
-                    <div class="resent-grid-img recommended-grid-img">
-                        <a href="#">
-                            <img class="img-fluid" src="/img/t1.jpg" />
-                        </a>
-                    </div>
-                    <div class="resent-grid-info recommended-grid-info">
-                        <h3>
-                            <a href="#" class="title title-info">Kal</a>
-                        </h3>
-                        <a href="#" class="author">Truhin</a>
-                    </div>
-                </div>
-                <div class="col-md-3 resent-grid recommended-grid slider-first">
-                    <div class="resent-grid-img recommended-grid-img">
-                        <a href="#">
-                            <img class="img-fluid" src="/img/t1.jpg" />
-                        </a>
-                    </div>
-                    <div class="resent-grid-info recommended-grid-info">
-                        <h3>
-                            <a href="#" class="title title-info">Kal</a>
-                        </h3>
-                        <a href="#" class="author">Truhin</a>
-                    </div>
-                </div>
+                @{ int sCount = 0;}
+                @foreach (var e in Model.Posts)
+                {
+                    if (e.Category == "Sport" && sCount < 8)
+                    {
+                        <div class="col-md-3 resent-grid recommended-grid slider-first">
+                            <div class="resent-grid-img recommended-grid-img">
+                                <a href="#">
+                                    <img class="img-fluid" src="@Url.Content("~/"+e.Id + "/image")" />
+                                </a>
+                            </div>
+                            <div class="resent-grid-info recommended-grid-info">
+                                <h3>
+                                    <a href="#" class="title title-info">@e.Description</a>
+                                </h3>
+                                <a href="#" class="author">@e.AuthorName</a>
+                            </div>
+                        </div>
+                        sCount++;
+                    }
+                }
             </div>
         </div>
     </div>
