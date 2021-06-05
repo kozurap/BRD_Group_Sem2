@@ -47,7 +47,7 @@ namespace BRD_Sem.Controllers
         {
             if (ModelState.IsValid)
             {
-                User user = await _dbContext.Users.Include(u => u.Role).FirstOrDefaultAsync(u =>
+                User user = await _dbContext.Users.FirstOrDefaultAsync(u =>
                     u.Email == model.Email && u.HashedPassword == HashPassword(model.Password));
                 if (user == null)
                 {
@@ -128,7 +128,7 @@ namespace BRD_Sem.Controllers
         public async Task<IActionResult> EmailConfirmationEnd(string key, int userId)
         {
             var actualUserId = _confirmationService.ConfirmEmail(key);
-            var user = _dbContext.Users.Include(us => us.Role).FirstOrDefault(u => u.Id == userId);
+            var user = _dbContext.Users.FirstOrDefault(u => u.Id == userId);
             if (user != null && actualUserId == userId)
             {
                 user.IsConfirmed = true;
