@@ -45,9 +45,9 @@
                 <a href="#" class="author">@e.AuthorName</a>
             </div>
             <div>
-                <form asp-controller="AdminPanel" asp-action="DeletePost">
+                <form asp-controller="AdminPanel" asp-action="DeletePost" method="post">
                     <div class="form-group">
-                        <input type="number" style="display:none" value="@e.Id" />    
+                        <input type="number" name="postId" style="display:none" value="@e.Id" />    
                         <input type="submit" class="btn btn-default" value="Delete" />
                     </div>
                 </form>
@@ -78,22 +78,22 @@
             <div class="modal-body">
 
                 <div class="signin mt-2">
-                    <form asp-controller="AdminPanel" asp-action="Post">
+                    <form asp-controller="AdminPanel" asp-action="Post" enctype="multipart/form-data">
                         <div class="form-group">
                             <h5>Enter Author Name</h5>
-                            <input type="text" class="form-control mt-1" id="AuthorName">
+                            <input type="text"  class="form-control mt-1" name="AuthorName">
                         </div>
                         <div class="form-group">
                             <h5>Add A Description</h5>
-                            <input type="text" class="form-control mt-1" id="Description">
+                            <input type="text" class="form-control mt-1" name="Description">
                         </div>
                         <div class="form-group">
                             <h5>Type Category</h5>
-                            <input type="text" class="form-control mt-1" id="Category">
+                            <input type="text" class="form-control mt-1" name="Category">
                         </div>
                         <div class="form-group">
                             <h5>Insert Image</h5>
-                            <input type="file" accept="image/jpeg,image/png" class="form-control-filr mt-1" id="newAvatar">
+                            <input type="file" name="Image" accept="image/jpeg,image/png, image/jpg" class="form-control-filr mt-1" id="newAvatar">
                         </div>                    
                         <div class="form-group">
                             <input type="submit" value="Create Post" class="btn btn-primary" />

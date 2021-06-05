@@ -54,7 +54,7 @@ namespace BRD_Sem
                 new EmailConfirmationService(TimeSpan.FromMinutes(5), serviceProvider.GetService<CommandService>())
             );
             services.Configure<StudentsDatabaseSettings>(
-                Configuration.GetSection(nameof(StudentsDatabaseSettings)));
+                Configuration.GetSection("MongoDBConnection"));
 
             services.AddSingleton<IStudentsDatabaseSettings>(sp =>
                 sp.GetRequiredService<IOptions<StudentsDatabaseSettings>>().Value);

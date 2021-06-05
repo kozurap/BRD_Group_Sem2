@@ -6,16 +6,16 @@ namespace BRD_Sem.Infrostructure
 {
     public class StudentsService
     {
-        private readonly IMongoCollection<Students> _books;
+        private readonly IMongoCollection<Students> _students;
 
         public StudentsService(IStudentsDatabaseSettings settings)
         {
             var client = new MongoClient(settings.ConnectionString);
             var database = client.GetDatabase(settings.DatabaseName);
 
-            _books = database.GetCollection<Students>(settings.StudentsCollectionName);
+            _students = database.GetCollection<Students>(settings.StudentsCollectionName);
         }
         public List<Students> Get() =>
-            _books.Find(book => true).ToList();
+            _students.Find(s => true).ToList();
     }
 }

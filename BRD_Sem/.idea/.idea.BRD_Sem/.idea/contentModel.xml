@@ -91,7 +91,6 @@
             <e p="Expired.cshtml" t="Include" />
           </e>
           <e p="Home" t="Include">
-            <e p="ContentPage.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
           </e>
           <e p="Main" t="Include" />

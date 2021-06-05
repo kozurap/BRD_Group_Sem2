@@ -21,7 +21,7 @@ namespace BRD_Sem.Controllers
             return View();
         }
 
-        [Route("~/GetList")]
+        [Route("~/Expired/GetList")]
         [HttpGet]
         public IActionResult GetList()
         {
@@ -36,11 +36,12 @@ namespace BRD_Sem.Controllers
             expired.Id = _dbContext.Expireds.ToList().Count + 1;
             if (reg.IsMatch(expired.Name))
                 _dbContext.Expireds.Add(expired);
+            _dbContext.SaveChanges();
             return View("Expired");
         }
         
         [HttpGet]
-        public IActionResult SearchByProfessor(string professor)
+        public IActionResult SearchByProfessor([FromQuery]string professor)
         {
             var expireds = _dbContext.Expireds.Where(e => e.ProfessorName == professor).ToList();
             return new JsonResult(expireds);

@@ -19,7 +19,7 @@ namespace BRD_Sem.Controllers
             return View();
         }
 
-        [Route("~/GetList")]
+        [Route("~/Music/GetList")]
         [HttpGet]
         public IActionResult GetList()
         {
@@ -36,11 +36,12 @@ namespace BRD_Sem.Controllers
             if (reg1.IsMatch(music.Name))
                 if (reg2.IsMatch(music.Date))
                     _dbContext.Musics.Add(music);
+            _dbContext.SaveChanges();
             return View("Music");
         }
 
         [HttpGet]
-        public IActionResult SearchByAuthor(string author)
+        public IActionResult SearchByAuthor([FromQuery]string author)
         {
             var musics = _dbContext.Musics.Where(e => e.Author == author).ToList();
             return new JsonResult(musics);

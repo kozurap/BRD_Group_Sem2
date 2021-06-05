@@ -11,13 +11,13 @@ $(document).ready(function () {
     //Music List
     function getTrackTable(data, status) {
         let str;
-        data.map(item => str += `<tr><td>${item.Name}</td><td>${item.Author}</td><td>${item.Date}</td></tr>`);
+        data.map(item => str += `<tr><td>${item.name}</td><td>${item.author}</td><td>${item.date}</td></tr>`);
         $("#MusData").append(str)
     };
 
     $.ajax({
         type: "GET",
-        url: "https://localhost:44374/Music/Music/GetList",
+        url: "https://"+ document.location.host +"/Music/GetList",
         success: (data, status) => { getTrackTable(data, status) }
     });
 
@@ -28,7 +28,7 @@ $(document).ready(function () {
             table.deleteRow(0);
         }
         let str;
-        data.map(item => str += `<tr><td>${item.Name}</td><td>${item.Author}</td><td>${item.Date}</td></tr>`);
+        data.map(item => str += `<tr><td>${item.name}</td><td>${item.author}</td><td>${item.date}</td></tr>`);
         $("#MusSData").append(str)
     };
     $("#FindGroup").on("click", function () {
@@ -38,10 +38,10 @@ $(document).ready(function () {
         $.ajax({
             type: "GET",
             data: {
-                name: author
+                author: author
             },
             contentType: "application/json; charset=utf-8",
-            url: "https://localhost:44374/Music/Music/SearchByAuthor",
+            url: "/Music/SearchByAuthor",
             success: function(data, status) { getSRecTable(data, status) }
         });
         return false;
@@ -51,13 +51,13 @@ $(document).ready(function () {
 
     function getExpTable(data, status) {
         let str;
-        data.map(item => str += `<tr><td>${item.Name}</td><td>${item.ProfessorName}</td><td>${item.Description}</td></tr>`);
+        data.map(item => str += `<tr><td>${item.name}</td><td>${item.professorName}</td><td>${item.description}</td></tr>`);
         $("#ExpData").append(str)
     };
 
     $.ajax({
         type: "GET",
-        url: "https://localhost:44374/Expired/Expired/GetList",
+        url: "https://"+document.location.host+"/Expired/GetList",
         success: (data, status) => { getExpTable(data, status) }
     });
 
@@ -69,7 +69,7 @@ $(document).ready(function () {
             table.deleteRow(0);
         }
         let str;
-        data.map(item => str += `<tr><td>${item.Name}</td><td>${item.ProfessorName}</td><td>${item.Description}</td></tr>`);
+        data.map(item => str += `<tr><td>${item.name}</td><td>${item.professorName}</td><td>${item.description}</td></tr>`);
         $("#ExpSData").append(str)
     };
     $("#FindExp").on("click", function () {
@@ -79,10 +79,10 @@ $(document).ready(function () {
         $.ajax({
             type: "GET",
             data: {
-                name: author
+                professor: author
             },
             contentType: "application/json; charset=utf-8",
-            url: "https://localhost:44374/Expired/Expired/SearchByProfessor",
+            url: "https://"+document.location.host+"/Expired/SearchByProfessor",
             success: (data, status) => { getSExpTable(data, status) }
         });
         return false;
