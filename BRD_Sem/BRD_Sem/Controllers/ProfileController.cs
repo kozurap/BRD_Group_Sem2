@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
 namespace BRD_Sem.Controllers
@@ -80,9 +81,14 @@ namespace BRD_Sem.Controllers
         {
             int userId = Int32.Parse(User.FindFirst("id").Value);
             var user = _dbContext.Users.FirstOrDefault(u => u.Id == userId);
+            if (user == null)
+            {
+                return BadRequest();
+            }
             var ms = new MemoryStream();
             await image.CopyToAsync(ms); 
-            user.Image = ms.ToArray(); 
+            user.Image = ms.ToArray();
+            _dbContext.SaveChanges();
             return Redirect("~/profile");
         }
 
@@ -100,20 +106,21 @@ namespace BRD_Sem.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> ProfileEdit(UserViewModel data)
+        public async Task<IActionResult> ProfileEdit(string userName, string userSurname)
         {
             if (ModelState.IsValid)
             {
-                var user = _dbContext.Users.FirstOrDefault(u=> u.Id == data.Id);
+                int userId = Int32.Parse(User.FindFirst("id").Value);
+                var user = _dbContext.Users.FirstOrDefault(u=> u.Id == userId);
                 if (user == null)
                     return RedirectToAction("Index", "Home");
 
-                user.Name = data.Name;
-                user.Surname = data.Surname;
+                user.Name = userName;
+                user.Surname = userSurname;
 
                 _dbContext.SaveChanges();
 
-                await _authenticationService.ReAuthenticate(user.Name, false);
+                await _authenticationService.ReAuthenticate(user, false);
 
                 return Redirect("~/profile");
             }

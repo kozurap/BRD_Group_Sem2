@@ -5,13 +5,13 @@
                 <label for="regName">
                     Введите Новое Имя
                 </label>
-                <input type="text" class="form-control" id="regName" placeholder="Enter name" />
+                <input type="text" name="userName" class="form-control" id="regName" placeholder="Enter name" />
             </div>
             <div class="form-group">
                 <label for="regSurname">
                     Введите новую Фамилию
                 </label>
-                <input type="text" class="form-control" id="regSurname" placeholder="Enter surname" />
+                <input type="text" name="userSurname" class="form-control" id="regSurname" placeholder="Enter surname" />
             </div>
             <div class="form-group">
                 <input type="submit" value="Save Changes" class="btn btn-primary" />
@@ -22,32 +22,31 @@
                 <label for="oldPass">
                     Введите свой старый Пароль
                 </label>
-                <input type="password" class="form-control" id="oldPass" placeholder="Old" />
+                <input type="password" name="OldPassword" class="form-control" id="oldPass" placeholder="Old" />
             </div>
             <div class="form-group">
                 <label for="newPass">
                     Введите новый Пароль
                 </label>
-                <input type="password" class="form-control" id="newPass" placeholder="New" />
+                <input type="password" name="NewPassword" class="form-control" id="newPass" placeholder="New" />
             </div>
             <div class="form-group">
                 <label for="confNewPass">
-                    Подтвердите новый пароль
+                    Введите новый Пароль
                 </label>
-                <input type="password" class="form-control" id="confNewPass" placeholder="Confirm New" />
+                <input type="password" name="ConfirmPassword" class="form-control" id="confNewPass" placeholder="Confirm New" />
             </div>
             <div class="form-group">
                 <input type="submit" value="Update Password" class="btn btn-primary" />
             </div>
         </form>
-
-        <form asp-action="UploadImage" method="post">
+        <form asp-action="UploadImage" method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <h5>New Avatar</h5>
-                <input type="file" accept="image/jpeg,image/png" class="form-control-file mt-1" id="newAvatar">
+                <input type="file" name="image" accept="image/jpeg,image/png,image/jpg" class="form-control-filr mt-1" id="newAvatar">
             </div>
             <div class="form-group">
-                <input type="submit" value="Update Password" class="btn btn-primary" />
+                <input type="submit" value="Update Avatar" class="btn btn-primary" />
             </div>
         </form>
     </div>

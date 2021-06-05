@@ -22,15 +22,14 @@ namespace BRD_Sem.Infrostructure
             await _httpContextAccessor.HttpContext.SignOutAsync();
         }
 
-        public async Task ReAuthenticate(string userName,bool rememberMe)
+        public async Task ReAuthenticate(User user,bool rememberMe)
         {
-            var user = _httpContextAccessor.HttpContext.User;
             var claims = new List<Claim>
             {    
-                new Claim(ClaimsIdentity.DefaultNameClaimType, user.Identity.Name),
-                new Claim(ClaimsIdentity.DefaultRoleClaimType, user.FindFirstValue(ClaimsIdentity.DefaultRoleClaimType)),
-                new Claim("username", userName),
-                new Claim("id",user.FindFirstValue("id"))
+                new Claim(ClaimsIdentity.DefaultNameClaimType, user.Email),
+                new Claim(ClaimsIdentity.DefaultRoleClaimType, user.Role),
+                new Claim("username", user.Name),
+                new Claim("id",user.Id.ToString())
             };
             ClaimsIdentity id = new ClaimsIdentity(claims, "ApplicationCookie",
                 ClaimsIdentity.DefaultNameClaimType, ClaimsIdentity.DefaultRoleClaimType);
