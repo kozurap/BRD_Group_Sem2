@@ -1,18 +1,44 @@
-﻿@model BRD_Sem.Models.ViewModels.ProfileModels.UserViewModel
-
-@{
-    Layout = null;
-}
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <title></title>
-</head>
-<body>
-<div>
-    
-</div>
+﻿<body>
+    <div>
+        <form asp-controller="Profile" asp-action="ProfileEdit" method="post">
+            <div class="form-group">
+                <label for="regName">
+                    Введите Новое Имя
+                </label>
+                <input type="text" class="form-control" id="regName" placeholder="Enter name" />
+            </div>
+            <div class="form-group">
+                <label for="regSurname">
+                    Введите новую Фамилию
+                </label>
+                <input type="text" class="form-control" id="regSurname" placeholder="Enter surname" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save Changes" class="btn btn-primary" />
+            </div>
+        </form>
+        <form asp-controller="Profile" asp-action="ProfileEditPassword" method="post">
+            <div class="form-group">
+                <label for="oldPass">
+                    Введите свой старый Пароль
+                </label>
+                <input type="password" class="form-control" id="oldPass" placeholder="Old" />
+            </div>
+            <div class="form-group">
+                <label for="newPass">
+                    Введите новый Пароль
+                </label>
+                <input type="password" class="form-control" id="newPass" placeholder="New" />
+            </div>
+            <div class="form-group">
+                <label for="confNewPass">
+                    Введите новый Пароль
+                </label>
+                <input type="password" class="form-control" id="confNewPass" placeholder="Confirm New" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Update Password" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
 </body>
-</html>

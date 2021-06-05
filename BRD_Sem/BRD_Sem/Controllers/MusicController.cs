@@ -22,8 +22,7 @@ namespace BRD_Sem.Controllers
         [Route("~/GetList")]
         public IActionResult GetList()
         {
-            var musicsList = _dbContext.Musics.ToList();
-            return new JsonResult(musicsList);
+            return Json(_dbContext.Musics.ToList());
         }
 
         [HttpPost]
@@ -38,10 +37,10 @@ namespace BRD_Sem.Controllers
         }
 
         [HttpGet]
-        public IActionResult SearchByProfessor(string professor)
+        public IActionResult SearchByAuthor(string author)
         {
-            var expireds = _dbContext.Expireds.Where(e => e.ProfessorName == professor).ToList();
-            return new JsonResult(expireds);
+            var musics = _dbContext.Musics.Where(e => e.Author == author).ToList();
+            return new JsonResult(musics);
         }
     }
 }
