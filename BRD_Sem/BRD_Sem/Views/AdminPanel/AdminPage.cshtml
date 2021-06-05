@@ -1,6 +1,4 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model BRD_Sem.Models.ViewModels.PostsViewModel 
 @{
     Layout = null;
 }
@@ -32,34 +30,30 @@
 </nav>
 <body style="background-color:darkslategray">
     <div class="adminPosts">
-        <form>
-            <div class="col-md-4 resent-grid recommended-grid slider-top-grids mt-3">
-                <div class="resent-grid-img recommended-grid-img">
-                    <a href="#">
-                        <img class="img-fluid" src="/img/t1.jpg" />
-                    </a>
-                </div>
-                <div class="resent-grid-info recommended-grid-info">
-                    <h3>
-                        <a href="#" class="title title-info">Kal</a>
-                    </h3>
-                    <a href="#" class="author">Truhin</a>
-                </div>
+        @foreach (var e in Model.Posts)
+        {
+        <div class="col-md-4 resent-grid recommended-grid slider-top-grids">
+            <div class="resent-grid-img recommended-grid-img">
+                <a href="#">
+                    <img class="img-fluid" src="@Url.Content("~/"+e.Id + "/image")" />
+                </a>
             </div>
-            <div class="col-md-4 resent-grid recommended-grid slider-top-grids mt-3">
-                <div class="resent-grid-img recommended-grid-img">
-                    <a href="#">
-                        <img class="img-fluid" src="/img/t1.jpg" />
-                    </a>
-                </div>
-                <div class="resent-grid-info recommended-grid-info">
-                    <h3>
-                        <a href="#" class="title title-info">Kal</a>
-                    </h3>
-                    <a href="#" class="author">Truhin</a>
-                </div>
+            <div class="resent-grid-info recommended-grid-info">
+                <h3>
+                    <a href="#" class="title title-info">@e.Description</a>
+                </h3>
+                <a href="#" class="author">@e.AuthorName</a>
             </div>
-        </form>
+            <div>
+                <form asp-controller="AdminPanel" asp-action="DeletePost">
+                    <div class="form-group">
+                        <input type="number" style="display:none" value="@e.Id" />    
+                        <input type="submit" class="btn btn-default" value="Delete" />
+                    </div>
+                </form>
+            </div>
+        </div>
+        }
     </div>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
@@ -84,19 +78,25 @@
             <div class="modal-body">
 
                 <div class="signin mt-2">
-                    <form>
-                        <h5>Enter Post Name</h5>
-                        <input type="text" class="form-control mt-1" id="PostName">
-                        <h5>Insert Image</h5>
-                        <input type="file" accept="image/jpeg,image/png" class="form-control-filr mt-1" id="newAvatar">
-                        <h5>Enter Author Name</h5>
-                        <input type="text" class="form-control mt-1" id="AuthorName">
-                        <h5>Add A Description</h5>
-                        <input type="text" class="form-control mt-1" id="Description">
-                        <div class="continue-button">
-                            <button type="button" class="btn btn-primary mt-2">
-                                Post dat sht!
-                            </button>
+                    <form asp-controller="AdminPanel" asp-action="Post">
+                        <div class="form-group">
+                            <h5>Enter Author Name</h5>
+                            <input type="text" class="form-control mt-1" id="AuthorName">
+                        </div>
+                        <div class="form-group">
+                            <h5>Add A Description</h5>
+                            <input type="text" class="form-control mt-1" id="Description">
+                        </div>
+                        <div class="form-group">
+                            <h5>Type Category</h5>
+                            <input type="text" class="form-control mt-1" id="Category">
+                        </div>
+                        <div class="form-group">
+                            <h5>Insert Image</h5>
+                            <input type="file" accept="image/jpeg,image/png" class="form-control-filr mt-1" id="newAvatar">
+                        </div>                    
+                        <div class="form-group">
+                            <input type="submit" value="Create Post" class="btn btn-primary" />
                         </div>
                     </form>
                 </div>
