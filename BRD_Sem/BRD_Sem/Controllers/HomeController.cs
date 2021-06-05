@@ -43,10 +43,6 @@ namespace BRD_Sem.Controllers
             return new FileStreamResult(new MemoryStream(data), "image/jpg");
         }
 
-        public IActionResult ContentPage()
-        {
-            return View();
-        }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
