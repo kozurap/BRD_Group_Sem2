@@ -42,7 +42,7 @@ $(document).ready(function () {
             },
             contentType: "application/json; charset=utf-8",
             url: "https://localhost:44374/Music/Music/SearchByAuthor",
-            success: (data, status) => { getSRecTable(data, status) }
+            success: function(data, status) { getSRecTable(data, status) }
         });
         return false;
     });

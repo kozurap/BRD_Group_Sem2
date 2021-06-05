@@ -10,7 +10,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace BRD_Sem.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20210604191545_Music")]
+    [Migration("20210605063012_Music")]
     partial class Music
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -44,8 +44,10 @@ namespace BRD_Sem.Migrations
 
             modelBuilder.Entity("BRD_Sem.Models.Music", b =>
                 {
-                    b.Property<string>("Id")
-                        .HasColumnType("text");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
                     b.Property<string>("Author")
                         .HasColumnType("text");

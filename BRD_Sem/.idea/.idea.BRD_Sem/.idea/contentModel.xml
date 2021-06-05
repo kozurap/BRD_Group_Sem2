@@ -12,10 +12,13 @@
           <e p="AdminPanelController.cs" t="Include" />
           <e p="ExpiredController.cs" t="Include" />
           <e p="HomeController.cs" t="Include" />
+          <e p="MoviesController.cs" t="Include" />
           <e p="MusicController.cs" t="Include" />
+          <e p="NewsController.cs" t="Include" />
           <e p="ProfileController.cs" t="Include" />
           <e p="SportsController.cs" t="Include" />
           <e p="StarostaController.cs" t="Include" />
+          <e p="TVShowsController.cs" t="Include" />
         </e>
         <e p="Infrostructure" t="Include">
           <e p="AuthenticationService.cs" t="Include" />
@@ -30,8 +33,8 @@
         <e p="Migrations" t="Include">
           <e p="20210602141452_InitialCreate.cs" t="Include" />
           <e p="20210602141452_InitialCreate.Designer.cs" t="Include" />
-          <e p="20210604191545_Music.cs" t="Include" />
-          <e p="20210604191545_Music.Designer.cs" t="Include" />
+          <e p="20210605063012_Music.cs" t="Include" />
+          <e p="20210605063012_Music.Designer.cs" t="Include" />
           <e p="ApplicationContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
@@ -50,7 +53,6 @@
             <e p="AccountModels" t="Include">
               <e p="LoginModel.cs" t="Include" />
               <e p="RegisterModel.cs" t="Include" />
-              <e p="SignUpAndInModel.cs" t="Include" />
             </e>
             <e p="PostsViewModel.cs" t="Include" />
             <e p="ProfileModels" t="Include">
@@ -76,14 +78,15 @@
         <e p="Views" t="Include">
           <e p="_ViewImports.cshtml" t="Include" />
           <e p="_ViewStart.cshtml" t="Include" />
+          <e p="Account" t="Include">
+            <e p="Login.cshtml" t="Include" />
+            <e p="Register.cshtml" t="Include" />
+          </e>
           <e p="AdminPanel" t="Include">
             <e p="AdminPage.cshtml" t="Include" />
           </e>
           <e p="Expired" t="Include">
             <e p="Expired.cshtml" t="Include" />
-          </e>
-          <e p="History" t="Include">
-            <e p="History.cshtml" t="Include" />
           </e>
           <e p="Home" t="Include">
             <e p="ContentPage.cshtml" t="Include" />

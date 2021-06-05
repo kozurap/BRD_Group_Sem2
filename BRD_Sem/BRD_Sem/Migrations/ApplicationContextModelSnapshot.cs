@@ -42,8 +42,10 @@ namespace BRD_Sem.Migrations
 
             modelBuilder.Entity("BRD_Sem.Models.Music", b =>
                 {
-                    b.Property<string>("Id")
-                        .HasColumnType("text");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
                     b.Property<string>("Author")
                         .HasColumnType("text");

@@ -22,10 +22,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="189c02f8-adb1-44a2-b5fb-2b1126a9ced3" name="Default Changelist" comment="МангоДБ, Че то там еще, Староста контроллер чисто контроллирую короче, роль старосты (там надо 3 роли по требованиям)(Зачем?)">
+    <list default="true" id="189c02f8-adb1-44a2-b5fb-2b1126a9ced3" name="Default Changelist" comment="Добавил Музыку чтобы она тоже аяксом делалась">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BRD_Sem/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BRD_Sem/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BRD_Sem/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BRD_Sem/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BRD_Sem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BRD_Sem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BRD_Sem/Models/ApplicationContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BRD_Sem/Models/ApplicationContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BRD_Sem/Views/Songs/Songs.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/BRD_Sem/Views/Music/Music.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BRD_Sem/Controllers/MusicController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BRD_Sem/Controllers/MusicController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BRD_Sem/Migrations/20210604191545_Music.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BRD_Sem/Migrations/20210604191545_Music.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BRD_Sem/Migrations/ApplicationContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BRD_Sem/Migrations/ApplicationContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BRD_Sem/Models/Music.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BRD_Sem/Models/Music.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BRD_Sem/wwwroot/js/site.js" beforeDir="false" afterPath="$PROJECT_DIR$/BRD_Sem/wwwroot/js/site.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +44,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/BRD_Sem/a.cs" />
         <option value="$PROJECT_DIR$/BRD_Sem/AuthenticationService.cs" />
         <option value="$PROJECT_DIR$/BRD_Sem/Models/ViewModels/AccountModels/LoginModel.cs" />
         <option value="$PROJECT_DIR$/BRD_Sem/Models/ViewModels/AccountModels/RegisterModel.cs" />
@@ -86,8 +91,9 @@
         <option value="$PROJECT_DIR$/BRD_Sem/Views/Starosta/Index.cshtml" />
         <option value="$PROJECT_DIR$/BRD_Sem/Startup.cs" />
         <option value="$PROJECT_DIR$/BRD_Sem/Controllers/StarostaController.cs" />
-        <option value="$PROJECT_DIR$/BRD_Sem/Models/Music.cs" />
         <option value="$PROJECT_DIR$/BRD_Sem/Models/ApplicationContext.cs" />
+        <option value="$PROJECT_DIR$/BRD_Sem/wwwroot/js/site.js" />
+        <option value="$PROJECT_DIR$/BRD_Sem/Models/Music.cs" />
         <option value="$PROJECT_DIR$/BRD_Sem/Controllers/MusicController.cs" />
       </list>
     </option>
@@ -149,7 +155,8 @@
       <workItem from="1622628459663" duration="11458000" />
       <workItem from="1622640195105" duration="3322000" />
       <workItem from="1622825837256" duration="99000" />
-      <workItem from="1622827281395" duration="5071000" />
+      <workItem from="1622827281395" duration="6200000" />
+      <workItem from="1622872831009" duration="1695000" />
     </task>
     <task id="LOCAL-00001" summary="Вот короче на, это с авторизацией, берешь AccountController, И делаешь под него View">
       <created>1622633049095</created>
@@ -186,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622833052640</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Добавил Музыку чтобы она тоже аяксом делалась">
+      <created>1622834192610</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1622834192610</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,7 +226,8 @@
     <MESSAGE value="Профиль, Аккаунт, АдминПанель, Expired, Темплейт для остальных контроллеров, куча сервисов, туда сюда" />
     <MESSAGE value="Добавил миграции" />
     <MESSAGE value="МангоДБ, Че то там еще, Староста контроллер чисто контроллирую короче, роль старосты (там надо 3 роли по требованиям)(Зачем?)" />
-    <option name="LAST_COMMIT_MESSAGE" value="МангоДБ, Че то там еще, Староста контроллер чисто контроллирую короче, роль старосты (там надо 3 роли по требованиям)(Зачем?)" />
+    <MESSAGE value="Добавил Музыку чтобы она тоже аяксом делалась" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил Музыку чтобы она тоже аяксом делалась" />
   </component>
   <component name="WindowStateProjectService">
     <state x="597" y="98" key="RiderGenerateDialog" timestamp="1622830339031">
@@ -223,10 +238,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1622631274454" />
-    <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1622833054028">
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1622834197906">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1622833054028" />
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1622834197906" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1622637918492">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
