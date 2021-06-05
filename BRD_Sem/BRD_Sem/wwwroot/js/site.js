@@ -17,7 +17,7 @@ $(document).ready(function () {
 
     $.ajax({
         type: "GET",
-        url: "https://localhost:44374/Music/GetList",
+        url: "https://localhost:44374/Music/Music/GetList",
         success: (data, status) => { getTrackTable(data, status) }
     });
 
@@ -43,6 +43,47 @@ $(document).ready(function () {
             contentType: "application/json; charset=utf-8",
             url: "https://localhost:44374/Music/Music/SearchByAuthor",
             success: (data, status) => { getSRecTable(data, status) }
+        });
+        return false;
+    });
+
+    //Expelled List
+
+    function getExpTable(data, status) {
+        let str;
+        data.map(item => str += `<tr><td>${item.Name}</td><td>${item.ProfessorName}</td><td>${item.Description}</td></tr>`);
+        $("#ExpData").append(str)
+    };
+
+    $.ajax({
+        type: "GET",
+        url: "https://localhost:44374/Expired/Expired/GetList",
+        success: (data, status) => { getExpTable(data, status) }
+    });
+
+    //Expelled Search By Professor
+
+    function getSExpTable(data, status) {
+        var table = document.getElementById("SrcExpTable");
+        while (table.rows.length > 0) {
+            table.deleteRow(0);
+        }
+        let str;
+        data.map(item => str += `<tr><td>${item.Name}</td><td>${item.ProfessorName}</td><td>${item.Description}</td></tr>`);
+        $("#ExpSData").append(str)
+    };
+    $("#FindExp").on("click", function () {
+        var author = document.getElementById("SearchProf").value;
+        console.log(JSON.stringify(author));
+        console.log(author);
+        $.ajax({
+            type: "GET",
+            data: {
+                name: author
+            },
+            contentType: "application/json; charset=utf-8",
+            url: "https://localhost:44374/Expired/Expired/SearchByProfessor",
+            success: (data, status) => { getSExpTable(data, status) }
         });
         return false;
     });

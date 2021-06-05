@@ -40,5 +40,14 @@
                 <input type="submit" value="Update Password" class="btn btn-primary" />
             </div>
         </form>
+        <form asp-controller="Profile" asp-action="UploadImage" action="post">
+            <div class="form-group">
+                <h5>New Avatar</h5>
+                <input type="file" accept="image/jpeg,image/png" class="form-control-filr mt-1" id="newAvatar">
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Update Avatar" class="btn btn-primary" />
+            </div>
+        </form>
     </div>
 </body>

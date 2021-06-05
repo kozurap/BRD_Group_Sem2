@@ -11,16 +11,38 @@
                 <thead>
                     <tr>
                         <th>Имя студента</th>
-                    </tr>
-                    <tr>
                         <th>Кем уничтожен</th>
-                    </tr>
-                    <tr>
                         <th>Как уничтожен</th>
                     </tr>
                 </thead>
-                <tbody id="HisData">
+                <tbody id="ExpData">
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <form asp-controller="Expired" asp-action="Post">
+                <input type="text" name="Name" id="PostName" placeholder="Имя бедолаги" required>
+                <input type="text" name="ProfessorName" id="PostProf" placeholder="Имя преподавателя" required>
+                <input type="text" name="Description" id="PostDescr" placeholder="Краткое описание" required>
+                <button formmethod="post">Добавить Запись</button>
+            </form>
+        </div>
+        <div>
+            <input type="text" name="Name" id="SearchProf" placeholder="Имя Преподавателя" required>
+            <button id="FindExp">Find</button>
+            <h3 class="display-4">Результаты поиска:</h3>
+        </div>
 
+        <div>
+            <table id="SrcExpTable" class="table table-light">
+                <thead>
+                    <tr>
+                        <th>Имя студента</th>
+                        <th>Кем уничтожен</th>
+                        <th>Как уничтожен</th>
+                    </tr>
+                </thead>
+                <tbody id="ExpSData">
                 </tbody>
             </table>
         </div>

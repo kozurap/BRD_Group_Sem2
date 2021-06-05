@@ -22,6 +22,7 @@ namespace BRD_Sem.Controllers
         }
 
         [Route("~/GetList")]
+        [HttpGet]
         public IActionResult GetList()
         {
             var expiredList = _dbContext.Expireds.ToList();
@@ -32,6 +33,7 @@ namespace BRD_Sem.Controllers
         public IActionResult Post(Expired expired)
         {
             Regex reg = new Regex(@"[A-ZА-Я]?[a-zа-я]+");
+            expired.Id = _dbContext.Expireds.ToList().Count + 1;
             if (reg.IsMatch(expired.Name))
                 _dbContext.Expireds.Add(expired);
             return View("Expired");

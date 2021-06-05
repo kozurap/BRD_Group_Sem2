@@ -9,14 +9,18 @@
         <div>
             <table class="table">
                 <thead>
-                    <tr><td>Название</td><td>Исполнитель</td><td>Дата выхода</td></tr>
+                    <tr>
+                        <th>Название</th>
+                        <th>Исполнитель</th>
+                        <th>Дата выхода</th>
+                    </tr>
                 </thead>
                 <tbody id="MusData">
                 </tbody>
             </table>
         </div>
         <div>
-            <form action="https://localhost:44374/Music/Music" method="post">
+            <form asp-controller="Music" asp-action="Post">
                 <input type="text" name="Name" id="PostName" placeholder="Название Трека" required>
                 <input type="text" name="Author" id="PostAuth" placeholder="Исполнитель" required>
                 <input type="text" name="Date" id="PostDate" placeholder="Дата Выхода" required>
@@ -33,7 +37,9 @@
             <table id="SrcMusTable" class="table table-light">
                 <thead>
                     <tr>
-                        <th scope="col">Автор</th>
+                        <th>Название</th>
+                        <th>Исполнитель</th>
+                        <th>Дата выхода</th>
                     </tr>
                 </thead>
                 <tbody id="MusSData">

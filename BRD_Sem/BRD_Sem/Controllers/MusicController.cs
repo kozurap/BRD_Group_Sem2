@@ -20,9 +20,11 @@ namespace BRD_Sem.Controllers
         }
 
         [Route("~/GetList")]
+        [HttpGet]
         public IActionResult GetList()
         {
-            return Json(_dbContext.Musics.ToList());
+            var list = _dbContext.Musics.ToList();
+            return new JsonResult(list);
         }
 
         [HttpPost]
@@ -30,6 +32,8 @@ namespace BRD_Sem.Controllers
         {
             Regex reg1 = new Regex(@"[A-ZА-Я]?[a-zа-я]+");
             Regex reg2 = new Regex(@"\d\d\.\d\d\.\d\d");
+            var id = _dbContext.Musics.ToList().Count + 1;
+            music.Id = id.ToString();
             if (reg1.IsMatch(music.Name))
                 if (reg2.IsMatch(music.Date))
                     _dbContext.Musics.Add(music);
